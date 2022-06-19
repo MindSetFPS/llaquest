@@ -1,34 +1,37 @@
-import Image from "next/image"
-
-import Ackerman from "../1/Ackerman2.png"
+import { useEffect, useContext, useState } from "react";
+import Questions from "../images/components/question";
+import Image from "next/image";
 
 export default function Play(){
-
-    const pro = ['Seiya', 'Jirall', 'Duki', 'Messi']
-
+    const pro1 = ['Acce', 'Ackerman', 'Aloned', 'Andresx', 'Arce', 'Buggax', 'Dimitry', 'Gonto', 'Grell', 'Jauny', 'Jirall']
+    const comodines = ['Duki', 'Messi','Goku', 'WillyRex', 'Misrra']
+    
+    const [bucketURL, setBucketURL] = useState('')
+    const [proName, setProName] = useState('')
+    
+    function generateURL(){
+        let name = Math.floor(Math.random() * (pro1.length - 0) ) + 0;
+        let num = Math.floor(Math.random() * (2 - 1) ) + 1;
+        setProName(pro1[name]) 
+        setBucketURL(`https://ndvztwbadgizyjthrjjs.supabase.co/storage/v1/object/public/pictures/images/1/${ pro1[name] }%20${ num }.png`)
+    }
+    
+    useEffect(() => {
+        generateURL()
+    }, [])
+    
     return(
-        <div className="" >
+        <div>
             <div className="-z-10 fixed overflow-hidden h-screen w-screen " >
                 <Image
                     alt="Mountains"
-                    src={Ackerman}
+                    src={"https://ndvztwbadgizyjthrjjs.supabase.co/storage/v1/object/public/pictures/images/1/Seiya 1.png"}
                     layout="fill"
                     objectFit="cover"
                     quality={100}
-                    />
+                />
             </div>
-            <h1 className="z-10 h-screen w-screen flex justify-center align-middle items-center " >
-                <div className="text-center" >
-                    <h1 className="text-white text-4xl " >¿Cual es su nombre?</h1>
-                    <div>
-                        {
-                            pro.map( (p) => <div  > <button className="mt-2 border-2 border-white rounded-md w-72 text-2xl text-white hover:bg-white hover:text-black transition" >  {p}   </button> </div> )
-                        }
-                        
-                    </div>
-                </div>
-
-            </h1>
+            <Questions player={proName}  playerList={pro1}  />
         </div>
     )
 }
