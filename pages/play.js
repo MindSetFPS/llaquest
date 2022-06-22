@@ -3,15 +3,17 @@ import Questions from "../components/question";
 import Image from "next/image";
 
 export default function Play(){
-    const level1 = ['Acce', 'Ackerman', 'Aloned', 'Andresx', 'Arce', 'Buggax', 'Dimitry', 'Gonto', 'Grell', 'Jauny', 'Jirall', 'Josedeodo', 'Leza', 'Newbie', 'Oddie', 'Pancake', 'Plugo',    'Rakyz', 'Relic', 'Seiya', 'Shadow', 'Slow', 'Sookie', 'Straight', 'Tierwulf', 'Wara', 'Whitelotus', 'Yeti']
+    const level1 = ['Acce', 'Ackerman', 'Aloned', 'Andresx', 'Arce', 'Buggax', 'Dimitry', 'Gonto', 'Grell', 'Jauny', 'Jirall', 'Josedeodo', 'Leza', 'Newbie', 'Oddie', 'Pancake', 'Plugo', 'Pozzo', 'Rakyz', 'Relic', 'Seiya', 'Shadow', 'Slow', 'Sookie', 'Straight', 'Tierwulf', 'Wara', 'Whitelotus', 'Yeti']
     const level2 = ['AlanQ', 'Baula', 'Careta', 'Ceo', 'Chunilda', 'Cody', 'Cotopaco', 'Elmo', 'Fallen', 'Gonzo', 'JJ', 'Kala', 'Kalipso', 'Kiefer', 'Milky', 'Monrrow', 'Renn', 'Shuhari', 'Solidsnake', 'Toplop', 'froststrike']
-    const level3 = ['1an', 'Biblos', 'Bola', 'Brayaron', 'Chiquito', 'Corsario', 'Crecre', 'Demizos', 'Emp', 'Fahren', 'Fix', 'Gavotto', 'Juliostito', 'Limitations', 'Mantarraya', 'Mataz', 'Pan', 'Skeeto', 'Skin', 'Tyr', 'Tyrone', 'Unforgiven', 'Zerito', 'Zeypher', 'Zombyra', 'Zothve']
+    const level3 = ['1an', 'Biblos', 'Bola', 'Brayaron', 'Chiquito', 'Corsario', 'Crecre', 'Demizos', 'Emp', 'Fahren', 'Fix', 'Gavotto', 'Juliostito', 'Limitationss', 'Mantarraya', 'Mataz', 'Pan', 'Skeeto', 'Skin', 'Tyr', 'Tyrone', 'Unforgiven', 'Zerito', 'Zeypher', 'Zombyra', 'Zothve']
     const level4 = ['Bardito', 'Beto', 'Camilo', 'Dye', 'Enga', 'Flare', 'Follow', 'Genthix', 'Liquiddiego', 'Maggical', 'Mariome', 'Messi', 'Nerzhul', 'Pierre', 'QQ', 'Revehaza', 'Soren', 'Tommy', 'Twins', 'Xypherz', 'Zelt']
     const level5 = ['Akunma', 'Aquasonic', 'DCStar', 'Fatorix', 'Gastruks', 'Gralou', 'Horus', 'Igor', 'Igor', 'Jcyter', 'Khynm', 'Kz', 'Lesmart', 'Manu', 'Minibestia', 'Mister G', 'Nate', 'Nobody', 'Rafamaik', 'Snaker', 'Ukkyr', 'Zeicro']
     const level6 = ['Arfyss', 'Daiky', 'Enatsu', 'Feitan', 'Fragio', 'Icebox', 'Kindless', 'Koughi', 'Kouzze', 'Kreshtdoo', 'Lyg', 'Madblade', 'Mun', 'Pieck', 'Shmebu', 'Shyro', 'Snok', 'Symebo', 'Tulz', 'Wikko', 'Xuradel']
     const comodines = ['Duki','Goku', 'WillyRex', 'Misrra', 'Chispostin', 'Pozzo', 'Tucky']
 
     const levelsList = [level1, level2, level3, level4, level5, level6]
+
+    // cada 5 puntos en el nivel, desbloqueas las personas del siguiente nivel, pero siguen saliendo las del anterior, y hay que adivinar todas si o si para ganar, 
 
     const [bucketURL, setBucketURL] = useState('')
     const [proName, setProName] = useState('')
